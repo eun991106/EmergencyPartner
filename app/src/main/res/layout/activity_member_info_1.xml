@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MemberInfo1Activity">
+
+
+    <TextView
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:text="취소"
+        android:onClick="Cancel"
+        android:textColor="@color/basic"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/infoImg"
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info01" />
+
+    <TextView
+        android:id="@+id/infoMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:orientation="vertical"
+        android:text="환자 정보 입력"
+        android:textColor="@color/basic"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoImg" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35sp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoMsg">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--*는 필수 항목 입니다.-->
+            <TextView
+                android:id="@+id/essenMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:text="*는 필수 항목 입니다.\n"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infoMsg" />
+
+            <TextView
+                android:id="@+id/nameTxtView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="*이름"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+            <EditText
+                android:id="@+id/nameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:gravity="left"
+                android:hint="홍길동"
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                android:text=""
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/birthTxtView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="생년월일"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+            <EditText
+                android:id="@+id/birthTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:hint="1998-01-01"
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                android:text=""
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/phonenumberTxtView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="*연락처"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+            <EditText
+                android:id="@+id/phonenumberTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:hint="01012341234 (숫자만 입력)"
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                android:text=""
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/addressTxtView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="집 주소"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+            <EditText
+                android:id="@+id/addressTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:hint="ex) 대구광역시 중구 달구벌대로15"
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                android:text=""
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/restaddressTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:hint="ex) OO아파트 101동 101호"
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                android:text=""
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/emailTxtView"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="이메일"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="17sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/profile" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/emailTxt"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="5sp"-->
+<!--                android:gravity="left"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:hint="pipopipo123@naver.com"-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:singleLine="false"-->
+<!--                android:text=""-->
+<!--                android:textColorHint="@color/gray"-->
+<!--                android:textCursorDrawable="@null"-->
+<!--                android:textSize="14sp"-->
+<!--                android:visibility="visible" />-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40sp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/previous"
+                    android:layout_width="165dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5sp"
+                    android:background="@drawable/roundtextblackleft"
+                    style="@style/Widget.Button.Simple"
+                    android:theme="@style/AppTheme.BorderButton"
+                    android:text="이전"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:onClick="goToPrevious"
+                    app:layout_constraintStart_toStartOf="parent"/>
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="165dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/roundtextblackright"
+                    style="@style/Widget.Button.Simple"
+                    android:theme="@style/AppTheme.BorderButton"
+                    android:text="다음"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:onClick="goToAddMemberInfo"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

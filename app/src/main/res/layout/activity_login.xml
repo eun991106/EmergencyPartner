@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".LoginActivity"
+    android:background="@color/white"
+    >
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="fitStart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/roundlogin" />
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/logo_splash"/>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginBottom="40sp">
+    <TextView
+        android:id="@+id/idTextView"
+        android:gravity="center|left"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="50sp"
+        android:background="@drawable/roundtext"
+        android:paddingLeft="20dp"
+        android:text="@string/id"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topguildine" />
+
+    <TextView
+        android:id="@+id/pwTextView"
+        android:gravity="center|left"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:background="@drawable/roundtext"
+        android:paddingLeft="20dp"
+        android:text="@string/pwd"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idTextView"
+
+        />
+
+    <EditText
+        android:id="@+id/log_idtxt"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="100sp"
+        android:gravity="center|left"
+        android:ems="10"
+        android:hint="@string/id"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:background="@null"
+        android:textCursorDrawable="@null"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/idTextView"
+        app:layout_constraintStart_toStartOf="@id/idTextView"
+        />
+
+    <EditText
+        android:id="@+id/log_pwtxt"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="100sp"
+        android:ems="10"
+        android:gravity="center|left"
+        android:hint="@string/pwd"
+        android:textColorHint="@color/gray"
+        android:inputType="textPersonName"
+        android:text=""
+        android:background="@null"
+        android:textCursorDrawable="@null"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/pwTextView"
+        app:layout_constraintStart_toStartOf="@id/pwTextView" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:background="@drawable/roundtextmain"
+        android:gravity="center"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:onClick="goToHome"
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pwTextView" />
+    <CheckBox
+        android:id="@+id/guardianlogincheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:shadowColor="@color/black"
+        android:buttonTint="@color/gray"
+        android:textColor="@color/black"
+        android:text="보호자로그인"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginbutton"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guardianlogincheckBox">
+
+    <TextView
+        android:id="@+id/joinMembership"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:textColor="@color/black"
+        android:text="회원가입"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:onClick="goToAddMemberInfo"
+       />
+
+    <TextView
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:text="|"
+        android:textSize="15sp"
+        android:textColor="@color/gray"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/joinMembership"
+        />
+
+    <TextView
+        android:id="@+id/findIDPW"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="0dp"
+        android:background="@null"
+        android:text="비밀번호 찾기"
+        android:textSize="15sp"
+        android:onClick="findPwd"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/bar"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topguildine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="400dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

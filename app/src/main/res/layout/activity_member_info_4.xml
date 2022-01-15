@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MemberInfo1Activity">
+
+
+    <TextView
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:text="취소"
+        android:onClick="Cancel"
+        android:textColor="@color/basic"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/infoImg"
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info04" />
+
+    <TextView
+        android:id="@+id/infoMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:orientation="vertical"
+        android:text="회원정보 입력"
+        android:textColor="@color/basic"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoImg" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35sp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoMsg">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--*는 필수 항목 입니다.-->
+            <TextView
+                android:id="@+id/essenMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:text="*는 필수 항목 입니다.\n"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infoMsg" />
+
+            <TextView
+                android:id="@+id/idTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*이메일"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+            <EditText
+                android:id="@+id/idTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:hint=""
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                android:text=""
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/IDessenMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:orientation="vertical"
+                android:text="이메일을 입력해주세요.\n"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infoMsg" />
+
+            <TextView
+                android:id="@+id/pwTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*비밀번호"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+            <EditText
+                android:id="@+id/pwTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:textColor="@color/black"
+                android:gravity="left"
+                android:hint=""
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                android:text=""
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/PWessenMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5sp"
+                android:text="영문, 숫자 혼합하여 8자~15자로 입력해주세요.\n"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infoMsg" />
+            <TextView
+                android:id="@+id/pwTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*비밀번호 확인"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+            <EditText
+                android:id="@+id/pwTxt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:hint=""
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                android:text=""
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/PWessenMsg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5sp"
+                android:text="영문, 숫자 혼합하여 8자~15자로 입력해주세요.\n"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infoMsg" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40sp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/previous"
+                    android:layout_width="165dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5sp"
+                    android:background="@drawable/roundtextblackleft"
+                    style="@style/Widget.Button.Simple"
+                    android:theme="@style/AppTheme.BorderButton"
+                    android:visibility="visible"
+                    android:text="이전"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:onClick="goToPrevious"
+                    app:layout_constraintStart_toStartOf="parent"/>
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="165dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/roundtextblackright"
+                    style="@style/Widget.Button.Simple"
+                    android:theme="@style/AppTheme.BorderButton"
+                    android:text="가입완료"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorMain"
+                    android:onClick="goToAddMemberInfo"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>      Widget.Button.Simple
+    <style name="Widget.Button.Simple" parent="android:Widget">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@drawable/roundborder</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Widget.Button.White" parent="android:Widget">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Widget.Button.Purple200" parent="android:Widget">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@drawable/roundtext</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="AppTheme.BorderButton" parent="">
+        <item name="colorPrimary">@color/black</item>
+    </style>
+    <style name="AppTheme.BlackBorderButton" parent="">
+        <item name="colorPrimary">@android:color/black</item>
+    </style>
+    <style name="AppTheme.WhiteBorderButton" parent="">
+        <item name="colorPrimary">@android:color/white</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

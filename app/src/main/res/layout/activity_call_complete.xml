@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic"
+    tools:context=".CallCompleteActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="300dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="206sp" />
+
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="1000sp"
+        android:layout_marginTop="00sp"
+        android:scaleType="fitStart"
+        app:layout_constraintTop_toBottomOf="@id/center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/callwhite" />
+
+
+    <TextView
+        android:id="@+id/text_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_center"
+        android:gravity="center"
+        android:layout_marginBottom="80dp"
+        android:text="호출 완료"
+        android:textColor="@color/colorMain"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/h_guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_state"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:background="@drawable/call"
+            android:layout_marginRight="25dp"
+            android:onClick="call"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/text_info"
+            app:layout_constraintTop_toBottomOf="@+id/text_state" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/text_infoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보호자 연락처"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/text_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전화번호"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+    <TextView
+        android:id="@+id/text_infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60sp"
+        android:text="님의 보호자연락처"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/text_state"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="010-0000-0000"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/text_infoText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+        android:id="@+id/button2"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="5sp"
+        android:background="@drawable/roundtextmain"
+        android:text="전화걸기"
+        android:onClick="call"
+        app:layout_constraintTop_toBottomOf="@+id/text_info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+-->
+    <TextView
+        android:id="@+id/text_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:textSize="20dp"
+        android:text="응급대원이 출발하였습니다."
+        android:textColor="@color/black"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:textSize="15dp"
+        android:visibility="invisible"
+        android:hint="이송 중인 병원을 입력해주세요."
+        android:background="@drawable/roundtextmainedge"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/warningText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보호자를 위해 구급대원만 눌러주세요."
+        android:layout_below="@id/btn1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn1"
+        />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10sp"
+        android:background="@drawable/roundtextmain"
+        android:gravity="center"
+        android:text="119 호송중"
+
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn2" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10sp"
+        android:background="@drawable/roundtextmain"
+        android:gravity="center"
+        android:text="응급실 도착"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_cancle" />
+
+    <Button
+        android:id="@+id/btn_cancle"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="60sp"
+        android:shadowColor="@color/white"
+        android:text="호출 취소"
+        android:visibility="visible"
+        android:textAllCaps="false"
+        android:background="@drawable/roundtextaccent"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
